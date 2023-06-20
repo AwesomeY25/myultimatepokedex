@@ -24,30 +24,9 @@ new Vue({
 import Vue from 'vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import axios from 'axios';
-import VueRouter from 'vue-router';
-import PokemonList from './components/PokemonList.vue';
-import PokemonDetail from './components/PokemonDetail.vue';
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-
-
-Vue.use(VueRouter);
-
-const routes = [
-  { path: '/', component: PokemonList },
-  { path: '/pokemon/:id', component: PokemonDetail }
-];
-
-const router = new VueRouter({
-  routes
-});
-
-new Vue({
-  router,
-  render: (h) => h(App)
-}).$mount('#app');
-
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
